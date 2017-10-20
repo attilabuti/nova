@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>NOVA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style type="text/css">
+        body {
+            background-color: #0B0B0B;
+            color: #E5EBEE;
+        }
+
+        .header {
+            border-bottom: 1px solid #181818;
+        }
+
+        .fa-lightbulb-o:hover {
+            transition: all .2s ease-in;
+            color: #f1c40f;
+        }
+
+        h4 {
+            color: #FF7733;
+        }
+
+        a {
+            color: #36a3d9;
+        }
+
+        a:hover {
+            transition: all .2s ease-in;
+            text-decoration: none;
+            color: #2980b9;
+        }
+
+        .container {
+            width: auto;
+            max-width: 680px;
+        }
+
+        .table td {
+            border-color: #181818;
+            width: 50%;
+        }
+
+        .fa-check {
+            color: #68c16a;
+        }
+
+        .fa-times {
+            color: #e74c3c;
+        }
+
+        footer {
+            color: #5c6773;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-3 pb-2 header">
+            <div class="col">
+                <h1 class="mt-2 text-center">
+                    <i class="fa fa-lightbulb-o"></i> It works!
+                </h1>
+            </div>
+        </div>
+
+        <div class="row pt-4 pb-4">
+            <p class="lead text-center w-100">
+                The Virtual Machine is up and running!<br>
+                Here is some additional information you might need.
+            </p>
+        </div>
+
+        <div class="row">
+            <h4>Installed software</h4>
+
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td>Node.js version</td>
+                        <td>{{nodeVersion}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Nginx version</td>
+                        <td>{{nginxVersion}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>PM2 version</td>
+                        <td>{{pm2Version}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>MailDev version</td>
+                        <td>{{maildevVersion}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>MailDev running</td>
+                        <td><i class="fa fa-{{maildevRunning}}"></i></td>
+                    </tr>
+
+                    <tr>
+                        <td>MongoDB version</td>
+                        <td>{{mongoVersion}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>MongoDB running</td>
+                        <td><i class="fa fa-{{mongoRunning}}"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="row mt-3">
+            <h4>MailDev</h4>
+
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td>SMTP port to catch emails</td>
+                        <td>1025</td>
+                    </tr>
+
+                    <tr>
+                        <td>Web interface</td>
+                        <td><a href="http://mail.projectname.local" target="_blank">mail.{{host}}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="row mt-3">
+            <h4>MongoDB</h4>
+
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td>Hostname</td>
+                        <td>{{host}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Port</td>
+                        <td>27017</td>
+                    </tr>
+
+                    <tr>
+                        <td>Username</td>
+                        <td>admin</td>
+                    </tr>
+
+                    <tr>
+                        <td>Password</td>
+                        <td>admin</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <em>Note: External access is enabled! Just use <strong>{{host}}</strong> as host.</em>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <footer>
+            <p class="text-center">
+                <a href="https://github.com/attilabuti/nova" target="_blank">NOVA</a> by
+                <a href="https://github.com/attilabuti" traget="_blank">Attila Buti</a><br>
+                Design based on <a href="https://github.com/MiniCodeMonkey/Vagrant-LAMP-Stack" target="_blank">Vagrant LAMP Stack</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

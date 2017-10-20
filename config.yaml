@@ -1,0 +1,15 @@
+---
+  name: projectname
+  hostname: projectname.local
+  aliases:
+    - mail.projectname.local
+  virtualbox:
+    gui: false
+    cpus: 2
+    memory: 1024
+  ip: 10.10.10.150
+  timezone: Europe/Budapest
+  appPort: 3000
+  mongodb:
+    user: admin
+    password: admin
